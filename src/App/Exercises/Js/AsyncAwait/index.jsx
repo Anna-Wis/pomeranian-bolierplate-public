@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { FetchData } from './FetchData';
 
 export const Exercise = () => {
   function doThingsPromise() {
@@ -40,9 +41,32 @@ export const Exercise = () => {
   };
 
   const loadAllData = async () => {
+    // poczekaj na załadowanie danych z loadUser
     const user = await loadUser();
+    // poczekaj na załadowanie danych z loadBooks
     const books = await loadBooks();
+    // poczekaj na załadowanie danych z loadMovies
     const movies = await loadMovies();
+
+    return {
+      user,
+      books,
+      movies,
+    };
+  };
+
+  const loadAllDataWithoutBlock = async () => {
+    // załaduj dane z wszystkich funkcji jednocześnie
+    const userPromise = loadUser();
+    const booksPromise = loadBooks();
+    const moviesPromise = loadMovies();
+
+    // poczekaj na załadowanie danych z loadUser
+    const user = await userPromise;
+    // poczekaj na załadowanie danych z loadBooks
+    const books = await booksPromise;
+    // poczekaj na załadowanie danych z loadMovies
+    const movies = await moviesPromise;
 
     return {
       user,
@@ -69,15 +93,21 @@ export const Exercise = () => {
 
   // ----------------------------
 
-  useEffect(() => {
-    doThingsPromise().then((res) => console.log(res));
-    doThingsAsync().then((res) => console.log(res));
-    doThingsAsync2().then((res) => console.log(res));
-    loadAllData().then((res) => console.log(res));
-    loadErrorAsync()
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
-  }, []);
+  // useEffect(() => {
+  //   doThingsPromise().then((res) => console.log(res));
+  //   doThingsAsync().then((res) => console.log(res));
+  //   doThingsAsync2().then((res) => console.log(res));
+  //   loadAllData().then((res) => console.log(res));
+  //   loadAllDataWithoutBlock().then((res) => console.log(res));
+  //   loadErrorAsync()
+  //     .then((res) => console.log(res))
+  //     .catch((err) => console.log(err));
+  // }, []);
 
-  return <div>Async await</div>;
+  return (
+    <div>
+      <div>Async await</div>
+      <FetchData />
+    </div>
+  );
 };
