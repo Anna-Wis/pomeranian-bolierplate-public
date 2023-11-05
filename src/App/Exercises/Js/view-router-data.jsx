@@ -21,6 +21,8 @@ import { MemoGameMetaData } from './MemoGames/router-data';
 import { OOPMetaData } from './OOP/router-data';
 import { JsStorageMetaData } from './JsStorage/router-data';
 import { SavedInputMetaData } from './SavedInput/router-data';
+import { AsyncAwaitMetaData } from './AsyncAwait/router-data';
+import { TryCatchMetaData } from './TryCatchFinally/router-data';
 import { PromisesAndMeMetaData } from './PromisesAndMe/router-data';
 import { useEffectAndPromiseExerciseMetaData } from './useEffectAndPromiseExercise/router-data';
 import { PromisesMethodsMetaData } from './PromisesMethods/router-data';
@@ -47,9 +49,12 @@ export const blockRouterMetaData = [
   OOPMetaData,
   JsStorageMetaData,
   SavedInputMetaData,
+  AsyncAwaitMetaData,
+  TryCatchMetaData,
   PromisesAndMeMetaData,
   useEffectAndPromiseExerciseMetaData,
   PromisesMethodsMetaData,
   PromisesMethodsMetaData,
+
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
