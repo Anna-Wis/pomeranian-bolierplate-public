@@ -6,6 +6,7 @@ import { ReactOnChangeMetaData } from './ReactOnChange/router-data';
 import { ReactIfStatementsMetaData } from './ReactIfStatements/router-data';
 import { ReactGuessNumberMetaData } from './ReactGuessNumber/router-data';
 import { HitTheMolMetaData } from './HitTheMol/router-data';
+import { ToDoWithServerMetaData } from './ToDoWithServer/router-data';
 
 export const blockRouterMetaData = [
   SubRouteExampleMetaData,
@@ -14,5 +15,6 @@ export const blockRouterMetaData = [
   ReactIfStatementsMetaData,
   ReactGuessNumberMetaData,
   HitTheMolMetaData,
+  ToDoWithServerMetaData,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
