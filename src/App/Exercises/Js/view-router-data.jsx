@@ -54,7 +54,5 @@ export const blockRouterMetaData = [
   PromisesAndMeMetaData,
   useEffectAndPromiseExerciseMetaData,
   PromisesMethodsMetaData,
-  PromisesMethodsMetaData,
-
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
