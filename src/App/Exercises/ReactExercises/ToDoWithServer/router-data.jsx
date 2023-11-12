@@ -1,4 +1,4 @@
-import { Exercise } from './ToDoWithServer';
+import { Exercise } from './index';
 
 export const ToDoWithServerMetaData = {
   path: 'todo-with-server',
