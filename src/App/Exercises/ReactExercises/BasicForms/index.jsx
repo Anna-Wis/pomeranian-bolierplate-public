@@ -23,6 +23,8 @@ export const Exercise = () => {
     }));
   };
 
+  //   const simpleReg = /^(?=.*d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^wds:])([^s]){8,16}$/;
+
   return (
     <div>
       <h1>Formularz przykładowy!</h1>
@@ -96,8 +98,9 @@ export const Exercise = () => {
           <div>
             <label htmlFor="password">Hasło</label>
             <input
+              pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$"
               id="password"
-              type="password"
+              type="text"
               name="password"
               value={formData.password}
               onChange={handleFormChange}
