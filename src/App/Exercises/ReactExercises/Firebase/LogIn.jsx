@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useFormInputs } from './useFormInput';
 import { loginSchema } from './schemas';
+import { singIn } from './SigniIn';
 
 export const LogIn = ({ setToggleLogIn }) => {
   const [inputs, handleInputChange] = useFormInputs();
@@ -10,8 +11,9 @@ export const LogIn = ({ setToggleLogIn }) => {
     submitEvent.preventDefault();
     try {
       const { email, password } = await loginSchema.validate(inputs);
+      const { user } = await singIn(email, password);
       setErrorMessage('');
-      console.log(email, password, 'inputs');
+      console.log(email, password, user, 'inputs');
     } catch (error) {
       console.log(error.message, 'error message');
       setErrorMessage(error.message);
