@@ -10,6 +10,8 @@ import { ToDoWithServerMetaData } from './ToDoWithServer/router-data';
 import { BasicFormsMetaData } from './BasicForms/router-data';
 import { BasicFormsReactHookMetaData } from './ReactHookBasicForms/router-data';
 import { FirebaseRouterMetaData } from './Firebase/router-data';
+import { CounterReduxRouterMetaData } from './CounterRedux/router-data';
+import { ReduxRTKRouterMetaData } from './PokemonRTK/router-data';
 
 export const blockRouterMetaData = [
   SubRouteExampleMetaData,
@@ -22,5 +24,7 @@ export const blockRouterMetaData = [
   BasicFormsMetaData,
   BasicFormsReactHookMetaData,
   FirebaseRouterMetaData,
+  CounterReduxRouterMetaData,
+  ReduxRTKRouterMetaData,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
