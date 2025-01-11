@@ -17,7 +17,7 @@ export function AppAside() {
         <ul>
           <li className="aside-row">
             <HouseIcon />
-            <NavLink to="dashboard">Dashboard</NavLink>
+            <NavLink to="dashboard">Strona główna</NavLink>
           </li>
           <li className="aside-row">
             <ElementIcon />
@@ -33,11 +33,11 @@ export function AppAside() {
           </li>
           <li className="aside-row">
             <CalendarIcon />
-            <NavLink to="calendar">Calendar</NavLink>
+            <NavLink to="calendar">Kalendarz</NavLink>
           </li>
           <li className="aside-row">
             <SettingIcon />
-            <NavLink to="settings">Settings</NavLink>
+            <NavLink to="settings">Ustawienia</NavLink>
           </li>
           <li className="aside-row">
             <BlogAsideIcon />
