@@ -1,10 +1,10 @@
-import { ReactRepetition } from './ReactRepetition';
+import { Rep } from './ReactRepetition';
 
 export const ReactRepetitionMetaData = {
   path: 'test-of-skill',
   date: '11-01-2025',
   linkLabel: 'Testowanie możliwości po przerwie',
   blockNo: 100,
-  element: <ReactRepetition />,
+  element: <Rep />,
   tags: ['components', 'test'],
 };
