@@ -7,7 +7,7 @@ export function Dashboard() {
   return (
     <div className="dashboard">
       <div>
-        <h1>Dashboard</h1>
+        <h1>Strona główna</h1>
         <Blocks />
       </div>
       <MyData />
