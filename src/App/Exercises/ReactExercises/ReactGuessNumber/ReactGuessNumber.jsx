@@ -7,8 +7,8 @@ function generateRandomNumber() {
 
 export function ReactGuessNumber() {
   const [randomNumber, setRandomNumber] = useState(generateRandomNumber());
-  const [inputNumber, setInputNumber] = useState(0);
-  const [text, setText] = useState('');
+  const [inputNumber, setInputNumber] = useState();
+  const [text, setText] = useState('Wpisz liczbę i kliknij start');
 
   function handleChange(event) {
     setInputNumber(event.target.value);
@@ -17,11 +17,12 @@ export function ReactGuessNumber() {
   function handleReset() {}
 
   function handleStart() {
+    console.log(randomNumber, 'random number');
     if (inputNumber > randomNumber) {
-      setText('Jestem większa');
+      setText('Jestem mniejsza');
     }
     if (inputNumber < randomNumber) {
-      setText('Jestem mniejsza');
+      setText('Jestem większa');
     }
     if (inputNumber == randomNumber) {
       setText('Gratulacje trafiłeś/aś!');
